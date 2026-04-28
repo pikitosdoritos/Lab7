@@ -96,13 +96,13 @@ d = {"a": 3, "b": 1, "c": 2}
 print_dict(d)
 
 print("\n2) Ключі, відсортовані за значенням:")
-print(sort_dict(d))  # ['b', 'c', 'a']
+print(sort_dict(d))
 
 print("\n3) Сума позиційних аргументів:")
-print(sum_args(1, 2, 3, 4, 5))  # 15
+print(sum_args(1, 2, 3, 4, 5))
 
 print("\n4) Сума списку (з kwargs):")
-print(sum_kwargs([10, 20, 30], extra=1, test=2))  # 60
+print(sum_kwargs([10, 20, 30], extra=1, test=2))
 
 print("\n5) Середнє значення:")
-print(average_args(2, 4, 6, 8))  # 5.0
+print(average_args(2, 4, 6, 8))
