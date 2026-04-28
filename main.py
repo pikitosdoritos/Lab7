@@ -90,3 +90,19 @@ def sum_kwargs(list_of_numbers, **kwargs):
 # 5)
 def average_args(*args):
     return sum(args) / len(args) if args else 0
+
+print("\n1) Вивід словника:")
+d = {"a": 3, "b": 1, "c": 2}
+print_dict(d)
+
+print("\n2) Ключі, відсортовані за значенням:")
+print(sort_dict(d))  # ['b', 'c', 'a']
+
+print("\n3) Сума позиційних аргументів:")
+print(sum_args(1, 2, 3, 4, 5))  # 15
+
+print("\n4) Сума списку (з kwargs):")
+print(sum_kwargs([10, 20, 30], extra=1, test=2))  # 60
+
+print("\n5) Середнє значення:")
+print(average_args(2, 4, 6, 8))  # 5.0
