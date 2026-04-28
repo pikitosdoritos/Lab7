@@ -106,3 +106,48 @@ print(sum_kwargs([10, 20, 30], extra=1, test=2))
 
 print("\n5) Середнє значення:")
 print(average_args(2, 4, 6, 8))
+
+# 3. Задано рядок слів string_1, розподілених пробілами.
+# Написати функції, які повертають список слів (рядків), що:
+# 1) починаються з заданої букви. Використати lambda-функцію.
+#    Функція запрошує у користувача ввести букву;
+# 2) містять задану букву. Використати lambda-функцію;
+# 3) мають задану довжину. Використати lambda-функцію;
+# 4) записані в зворотному порядку;
+# 5) починаються з заданого префіксу prefix, який передається як параметр у функцію.
+
+print("==" * 80)
+print("Завдання 3")
+
+string_1 = "apple banana apricot cherry avocado berry melon"
+
+def starts_with_letter(s):
+    letter = input("Введіть букву: ")
+    return list(filter(lambda word: word.startswith(letter), s.split()))
+
+def contains_letter(s, letter):
+    return list(filter(lambda word: letter in word, s.split()))
+
+def words_of_length(s, length):
+    return list(filter(lambda word: len(word) == length, s.split()))
+
+def reverse_words(s):
+    return list(map(lambda word: word[::-1], s.split()))
+
+def starts_with_prefix(s, prefix):
+    return list(filter(lambda word: word.startswith(prefix), s.split()))
+
+print("\n1) Починаються з букви:")
+print(starts_with_letter(string_1))
+
+print("\n2) Містять букву 'a':")
+print(contains_letter(string_1, "a"))
+
+print("\n3) Довжина = 6:")
+print(words_of_length(string_1, 6))
+
+print("\n4) Зворотні слова:")
+print(reverse_words(string_1))
+
+print("\n5) Префікс 'ap':")
+print(starts_with_prefix(string_1, "ap"))
