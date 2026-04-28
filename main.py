@@ -24,7 +24,7 @@ def multiply(a, *, b):
     return a * b
 
 # 4)
-def average(*numbers):
+def average(numbers):
     if len(numbers) == 0:
         return 0
 
@@ -50,7 +50,7 @@ print("\n3) Добуток (позиційний + іменований):")
 print(multiply(4, b=6))  
 
 print("\n4) Середнє арифметичне:")
-print(average(1, 2, 3, 4, 5)) 
+print(average([1, 2, 3, 4, 5])) 
 
 print("\n5) Сума двох чисел:")
 print(add(7, 8))  
@@ -186,8 +186,11 @@ def sum_odd(lst):
     return sum(filter(lambda x: x % 2 != 0, lst))
 
 def product_no_zero(lst):
+    nums = list(filter(lambda x: x != 0, lst))
+    if not nums:
+        return 0
     result = 1
-    for x in filter(lambda x: x != 0, lst):
+    for x in nums:
         result *= x
     return result
 
